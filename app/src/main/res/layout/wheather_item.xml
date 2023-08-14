@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	android:layout_marginBottom="20dp"
+	tools:context=".ui.MainActivity">
+
+
+	<ImageView
+		android:id="@+id/icon"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginLeft="10dp"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toBottomOf="@+id/date"
+		tools:srcCompat="@tools:sample/avatars" />
+
+	<TextView
+		android:id="@+id/condition"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginLeft="10dp"
+		app:layout_constraintStart_toEndOf="@+id/icon"
+		app:layout_constraintTop_toBottomOf="@+id/date" />
+
+	<TextView
+		android:id="@+id/temperatureTitle"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginLeft="10dp"
+		android:layout_marginTop="10dp"
+		android:text="Температура: "
+		app:layout_constraintStart_toEndOf="@+id/icon"
+		app:layout_constraintTop_toBottomOf="@+id/condition" />
+
+	<TextView
+		android:id="@+id/temperature"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginLeft="10dp"
+		android:layout_marginTop="10dp"
+		app:layout_constraintStart_toEndOf="@+id/temperatureTitle"
+		app:layout_constraintTop_toBottomOf="@+id/condition" />
+
+	<TextView
+		android:id="@+id/windSpeedTitle"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginLeft="10dp"
+		android:layout_marginTop="10dp"
+		android:text="Скорость ветра: "
+		app:layout_constraintStart_toEndOf="@+id/icon"
+		app:layout_constraintTop_toBottomOf="@+id/temperatureTitle" />
+
+	<TextView
+		android:id="@+id/windSpeed"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginLeft="10dp"
+		android:layout_marginTop="10dp"
+		app:layout_constraintStart_toEndOf="@+id/windSpeedTitle"
+		app:layout_constraintTop_toBottomOf="@+id/temperature" />
+
+	<TextView
+		android:id="@+id/humidityTitle"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginLeft="10dp"
+		android:layout_marginTop="10dp"
+		android:layout_marginBottom="10dp"
+		android:text="Влажность: "
+		app:layout_constraintStart_toEndOf="@+id/icon"
+		app:layout_constraintTop_toBottomOf="@+id/windSpeedTitle" />
+
+	<TextView
+		android:id="@+id/humidity"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginLeft="10dp"
+		android:layout_marginTop="10dp"
+		android:layout_marginBottom="10dp"
+		app:layout_constraintStart_toEndOf="@+id/humidityTitle"
+		app:layout_constraintTop_toBottomOf="@+id/windSpeed" />
+
+	<TextView
+		android:id="@+id/date"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="10dp"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

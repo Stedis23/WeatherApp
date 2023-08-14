@@ -1,0 +1,8 @@
+<resources>
+	<string name="app_name">WeatherApp</string>
+
+	<string name="search_hint">Введите город</string>
+
+	<string name="nothing_found_error">Ничего не найдено :(</string>
+	<string name="unknown_error">Что-то пошло не так. Попробуйте снова</string>
+</resources>
