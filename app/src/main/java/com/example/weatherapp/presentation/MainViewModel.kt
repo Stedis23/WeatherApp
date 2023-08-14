@@ -14,7 +14,7 @@ class MainViewModel(
 ) : ViewModel() {
 
 	private val _uiStateFlow = MutableStateFlow<MainState>(MainState.Initial)
-	val uiState: StateFlow<MainState>
+	val uiStateFlow: StateFlow<MainState>
 		get() = _uiStateFlow
 
 	private val errorHandler = CoroutineNetworkExceptionHandler { errorMessage ->

@@ -3,7 +3,6 @@ package com.example.weatherapp.ui
 import androidx.appcompat.app.AppCompatActivity
 import org.koin.androidx.viewmodel.ext.android.viewModel
 import android.os.Bundle
-import android.util.Log
 import android.widget.EditText
 import android.widget.ImageView
 import android.widget.ProgressBar
@@ -33,7 +32,7 @@ class MainActivity : AppCompatActivity() {
 		super.onCreate(savedInstanceState)
 		setContentView(R.layout.activity_main)
 		setupViews()
-		viewModel.uiState.onEach(::renderUIState).launchIn(lifecycleScope)
+		viewModel.uiStateFlow.onEach(::renderUIState).launchIn(lifecycleScope)
 	}
 
 	private fun setupViews() {
@@ -48,7 +47,7 @@ class MainActivity : AppCompatActivity() {
 		recyclerView.adapter = adapter
 		recyclerView.layoutManager = LinearLayoutManager(this)
 
-		viewModel.uiState
+		viewModel.uiStateFlow
 			.filterIsInstance<MainState.Content>()
 			.onEach {
 				adapter.update(it.weather.forecast.forecastDayList)
